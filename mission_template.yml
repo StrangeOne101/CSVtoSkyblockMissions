@@ -1,0 +1,43 @@
+  {id}:
+    missionType: {type}
+    missionData:
+      {number}:
+        item:
+          material: {material}
+          amount: 1
+          displayName: "{displayName}"
+          lore:
+            - "&b&lObjectives:"
+      {requirements_lore}
+            - ""
+            - "&b&lRewards"
+            - "&b&l* &{crystals} Island Crystals"
+            - "&b&l* &7${money}"
+            - "&b&l* &7{experience} Island Experience"{itemRewardsLore}
+          slot: null
+        missions:
+    {missions}
+        completeSound: "ENTITY_PLAYER_LEVELUP"
+        missionDependencies: []
+        reward:
+          item:
+            material: "DIAMOND"
+            amount: 1
+            displayName: "{displayName} Reward"
+            headData: null
+            headOwner: null
+            headOwnerUUID: null
+            lore:
+              - "&b&l Rewards"
+              - "&b&l* &7{crystals} Island Crystals"
+              - "&b&l* &${money}"
+              - "&b&l* &7{experience} Island Experience"{itemRewardsLore}
+            slot: null
+          commands: [ {itemRewards} ]
+          teamExperience: {experience}
+          bankRewards:
+            Crystals: {crystals}
+          money: {money}
+          experience: 0
+          sound: "ENTITY_PLAYER_LEVELUP"
+        message: "%prefix% &7{id} mission Completed!\n&b&l* &7+{experience} Island Experience\n&b&l* &7+{crystals} Island Crystals\n&b&l* &7+${money} Money{itemRewardsLoreMessage}\n&7/is rewards to redeem rewards"
